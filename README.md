@@ -11,8 +11,8 @@ var express = require('express');
 var ifttt = require('express-ifttt');
 var app = express();
 
-app.get('/xmlrpc.php', ifttt, function (req, res) {
-  console.log(req.data);
+app.post('/xmlrpc.php', ifttt, function (req, res) {
+  console.log(req.body);
   /* req.data should look something like the object below.
   {
     username: 'username',
